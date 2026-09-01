@@ -46,7 +46,7 @@ python shAIm.py
 
 ## Configuration
 
-When first running, the script will create a hidden `.shAIm` folder in your home directory. This folder contains `config.json` where you can set profile settings, swarm settings, agent definitions, default skill names, and attachment size limits. The hidden folder also contains conversations, uploads, schedules and skills. We recommend updating the `config.json` file directly or via shAIm immediately after first running the script.  
+When first running shAIm.py, the hidden folder `.shAIm` will be created in your home directory. This folder contains `config.json` where you can set profile settings, swarm settings, agent definitions, default skill names, and attachment size limits. The hidden folder also contains conversations, uploads, schedules and skills. We recommend updating the `config.json` file directly or via shAIm immediately after the first run.
 
 ## Usage
 
