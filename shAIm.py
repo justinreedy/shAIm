@@ -1,4 +1,4 @@
-# Copyright (c) 2026 Justinian Pty Ltd
+# Copyright (c) 2026 Justinian Pty Ltd 
 # Released under the MIT License (see LICENSE file)
 
 #!/usr/bin/env python3
