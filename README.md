@@ -36,7 +36,7 @@ git+https://github.com/openai/swarm.git
 4. Make sure Ollama or another compatible local endpoint is running.
 
 ```bash
-git clone https://github.com/your-username/shAIm.git
+git clone https://github.com/justinreedy/shAIm.git
 cd shAIm
 python -m venv .venv
 source .venv/bin/activate
@@ -59,7 +59,7 @@ python shAIm.py
 Start with custom options:
 
 ```bash
-python shAIm.py --host 192.168.1.159 --port 11434 --model deepseek-r1:8b
+python shAIm.py --host 192.168.1.1 --port 11434 --model deepseek-r1:8b
 python shAIm.py --profile default
 python shAIm.py --conversation <conversation_id>
 python shAIm.py --new-chat "New project planning"
