@@ -131,22 +131,6 @@ The script includes planner, builder, and reviewer agents and can execute swarm 
 - `/swarm status` — show active swarm status. 
 - `/swarm show` — display the next completed swarm result. 
 
-## Project structure
-
-A practical repository layout for GitHub would look like this:
-
-```text
-shAIm/
-├── shAIm.py
-├── README.md
-├── requirements.txt
-└── skills/
-    ├── coding.md
-    └── writing.md
-```
-
-The running application will also create and use its own working files for saved conversations, uploaded attachments, schedules, and configuration during normal operation:
-
 ## Notes
 
 - Swarm support is optional at runtime, but the script includes explicit checks for both the `openai` package and the Swarm package before enabling that path. 
