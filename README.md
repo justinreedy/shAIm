@@ -1,4 +1,5 @@
-# shAIm - The terminal client for self hosted AI 
+# shAIm - SHell AI Manager
+# The terminal client for self hosted AI 
 
 A terminal client for self hosted AI models with support for Ollama, saved profiles, conversation persistence, local skill files, file attachments, local tool execution, and multi-agent task orchestration.
 
