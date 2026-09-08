@@ -335,13 +335,13 @@ class LocalToolbox:
 
     def describe_tools(self):
         return [
-            "tool:bash <command>  - run a shell command locally",
+            "tool:cmd <command>  - run a shell command locally",
             "tool:python <code>   - run Python locally",
             "tool:read <path>     - read a local text file",
             "tool:write <path>    - write a local text file; content prompted after command",
         ]
 
-    def run_bash(self, command):
+    def run_cmd(self, command):
         proc = subprocess.run(command, shell=True, cwd=self.working_dir, capture_output=True, text=True, timeout=120)
         return (proc.stdout or "") + (("\n" + proc.stderr) if proc.stderr else "")
 
@@ -805,7 +805,7 @@ def print_help():
         "[bold]/skill drop <name>[/bold] deactivate a skill\n"
         "[bold]/skill show <name>[/bold] preview a skill file\n"
         "[bold]/skill clear[/bold] deactivate all skills\n\n"
-        "[bold]/tool bash <command>[/bold] run a shell command locally\n"
+        "[bold]/tool cmd <command>[/bold] run a shell command locally\n"
         "[bold]/tool python <code>[/bold] run local Python code\n"
         "[bold]/tool read <path>[/bold] read a local text file\n"
         "[bold]/tool write <path>[/bold] write a local text file after prompt\n\n"
@@ -863,15 +863,15 @@ def open_conversation(state, conversation_id):
 
 def handle_tool_command(value, state):
     if not value:
-        console.print("[red]Usage: /tool bash <command> | /tool python <code> | /tool read <path> | /tool write <path>[/red]")
+        console.print("[red]Usage: /tool cmd <command> | /tool python <code> | /tool read <path> | /tool write <path>[/red]")
         return
     parts = value.split(maxsplit=1)
     action = parts[0].lower()
     payload = parts[1] if len(parts) > 1 else ""
     toolbox = state["toolbox"]
     try:
-        if action == "bash":
-            output = toolbox.run_bash(payload)
+        if action == "cmd":
+            output = toolbox.run_cmd(payload)
         elif action == "python":
             output = toolbox.run_python(payload)
         elif action == "read":
