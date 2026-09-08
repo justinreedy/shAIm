@@ -330,7 +330,7 @@ class AttachmentManager:
 
 
 class LocalToolbox:
-    def __init__(self, working_dir=None):
+    def __init__(self, working_dir=Path.home()):
         self.working_dir = Path(working_dir or Path.cwd())
 
     def describe_tools(self):
